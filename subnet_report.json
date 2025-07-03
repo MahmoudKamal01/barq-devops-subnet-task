@@ -1,0 +1,281 @@
+{
+    "ip_details": [
+        {
+            "ip": "192.168.1.24",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "192.168.1.0/24",
+            "network_address": "192.168.1.0",
+            "broadcast_address": "192.168.1.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "10.1.5.4",
+            "subnet_mask": "255.255.254.0",
+            "cidr_notation": "10.1.4.0/23",
+            "network_address": "10.1.4.0",
+            "broadcast_address": "10.1.5.255",
+            "usable_hosts": 510
+        },
+        {
+            "ip": "172.16.20.33",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "172.16.20.0/24",
+            "network_address": "172.16.20.0",
+            "broadcast_address": "172.16.20.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "192.168.100.7",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "192.168.100.0/22",
+            "network_address": "192.168.100.0",
+            "broadcast_address": "192.168.103.255",
+            "usable_hosts": 1022
+        },
+        {
+            "ip": "10.0.3.112",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "10.0.3.0/24",
+            "network_address": "10.0.3.0",
+            "broadcast_address": "10.0.3.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "172.16.1.200",
+            "subnet_mask": "255.255.254.0",
+            "cidr_notation": "172.16.0.0/23",
+            "network_address": "172.16.0.0",
+            "broadcast_address": "172.16.1.255",
+            "usable_hosts": 510
+        },
+        {
+            "ip": "10.2.1.56",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "10.2.0.0/22",
+            "network_address": "10.2.0.0",
+            "broadcast_address": "10.2.3.255",
+            "usable_hosts": 1022
+        },
+        {
+            "ip": "192.168.2.3",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "192.168.2.0/24",
+            "network_address": "192.168.2.0",
+            "broadcast_address": "192.168.2.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "172.16.50.1",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "172.16.48.0/22",
+            "network_address": "172.16.48.0",
+            "broadcast_address": "172.16.51.255",
+            "usable_hosts": 1022
+        },
+        {
+            "ip": "10.10.0.5",
+            "subnet_mask": "255.255.254.0",
+            "cidr_notation": "10.10.0.0/23",
+            "network_address": "10.10.0.0",
+            "broadcast_address": "10.10.1.255",
+            "usable_hosts": 510
+        },
+        {
+            "ip": "192.168.3.14",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "192.168.3.0/24",
+            "network_address": "192.168.3.0",
+            "broadcast_address": "192.168.3.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "10.20.4.6",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "10.20.4.0/22",
+            "network_address": "10.20.4.0",
+            "broadcast_address": "10.20.7.255",
+            "usable_hosts": 1022
+        },
+        {
+            "ip": "172.16.8.9",
+            "subnet_mask": "255.255.254.0",
+            "cidr_notation": "172.16.8.0/23",
+            "network_address": "172.16.8.0",
+            "broadcast_address": "172.16.9.255",
+            "usable_hosts": 510
+        },
+        {
+            "ip": "10.4.3.2",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "10.4.3.0/24",
+            "network_address": "10.4.3.0",
+            "broadcast_address": "10.4.3.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "192.168.20.44",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "192.168.20.0/22",
+            "network_address": "192.168.20.0",
+            "broadcast_address": "192.168.23.255",
+            "usable_hosts": 1022
+        },
+        {
+            "ip": "172.16.40.22",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "172.16.40.0/24",
+            "network_address": "172.16.40.0",
+            "broadcast_address": "172.16.40.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "10.0.0.200",
+            "subnet_mask": "255.255.254.0",
+            "cidr_notation": "10.0.0.0/23",
+            "network_address": "10.0.0.0",
+            "broadcast_address": "10.0.1.255",
+            "usable_hosts": 510
+        },
+        {
+            "ip": "192.168.10.1",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "192.168.10.0/24",
+            "network_address": "192.168.10.0",
+            "broadcast_address": "192.168.10.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "172.16.15.15",
+            "subnet_mask": "255.255.254.0",
+            "cidr_notation": "172.16.14.0/23",
+            "network_address": "172.16.14.0",
+            "broadcast_address": "172.16.15.255",
+            "usable_hosts": 510
+        },
+        {
+            "ip": "10.3.3.9",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "10.3.0.0/22",
+            "network_address": "10.3.0.0",
+            "broadcast_address": "10.3.3.255",
+            "usable_hosts": 1022
+        },
+        {
+            "ip": "192.168.4.5",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "192.168.4.0/24",
+            "network_address": "192.168.4.0",
+            "broadcast_address": "192.168.4.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "10.50.2.7",
+            "subnet_mask": "255.255.255.0",
+            "cidr_notation": "10.50.2.0/24",
+            "network_address": "10.50.2.0",
+            "broadcast_address": "10.50.2.255",
+            "usable_hosts": 254
+        },
+        {
+            "ip": "172.16.60.30",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "172.16.60.0/22",
+            "network_address": "172.16.60.0",
+            "broadcast_address": "172.16.63.255",
+            "usable_hosts": 1022
+        },
+        {
+            "ip": "192.168.7.8",
+            "subnet_mask": "255.255.254.0",
+            "cidr_notation": "192.168.6.0/23",
+            "network_address": "192.168.6.0",
+            "broadcast_address": "192.168.7.255",
+            "usable_hosts": 510
+        },
+        {
+            "ip": "10.15.5.50",
+            "subnet_mask": "255.255.252.0",
+            "cidr_notation": "10.15.4.0/22",
+            "network_address": "10.15.4.0",
+            "broadcast_address": "10.15.7.255",
+            "usable_hosts": 1022
+        }
+    ],
+    "subnet_groups": {
+        "192.168.1.0/24": [
+            "192.168.1.24"
+        ],
+        "10.1.4.0/23": [
+            "10.1.5.4"
+        ],
+        "172.16.20.0/24": [
+            "172.16.20.33"
+        ],
+        "192.168.100.0/22": [
+            "192.168.100.7"
+        ],
+        "10.0.3.0/24": [
+            "10.0.3.112"
+        ],
+        "172.16.0.0/23": [
+            "172.16.1.200"
+        ],
+        "10.2.0.0/22": [
+            "10.2.1.56"
+        ],
+        "192.168.2.0/24": [
+            "192.168.2.3"
+        ],
+        "172.16.48.0/22": [
+            "172.16.50.1"
+        ],
+        "10.10.0.0/23": [
+            "10.10.0.5"
+        ],
+        "192.168.3.0/24": [
+            "192.168.3.14"
+        ],
+        "10.20.4.0/22": [
+            "10.20.4.6"
+        ],
+        "172.16.8.0/23": [
+            "172.16.8.9"
+        ],
+        "10.4.3.0/24": [
+            "10.4.3.2"
+        ],
+        "192.168.20.0/22": [
+            "192.168.20.44"
+        ],
+        "172.16.40.0/24": [
+            "172.16.40.22"
+        ],
+        "10.0.0.0/23": [
+            "10.0.0.200"
+        ],
+        "192.168.10.0/24": [
+            "192.168.10.1"
+        ],
+        "172.16.14.0/23": [
+            "172.16.15.15"
+        ],
+        "10.3.0.0/22": [
+            "10.3.3.9"
+        ],
+        "192.168.4.0/24": [
+            "192.168.4.5"
+        ],
+        "10.50.2.0/24": [
+            "10.50.2.7"
+        ],
+        "172.16.60.0/22": [
+            "172.16.60.30"
+        ],
+        "192.168.6.0/23": [
+            "192.168.7.8"
+        ],
+        "10.15.4.0/22": [
+            "10.15.5.50"
+        ]
+    }
+}

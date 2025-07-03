@@ -1,14 +1,25 @@
+import json
 import pandas as pd
+import matplotlib.pyplot as plt
 
-df = pd.read_excel("ip_data.xlsx") 
+def get_dataframe(excel_file_name):
+       try:
+        return pd.read_excel(excel_file_name)
+       except FileNotFoundError:
+            print(f"Error: File '{excel_file_name}' not found")
+            return None
+       except Exception as e:
+            print(f"Error loading Excel file: {str(e)}")
+            return None
 
-input_arr = [
-    {"ip": row["IP Address"], "subnet_mask": row["Subnet Mask"]}
-    for _, row in df.iterrows()
-]
-
-print(input_arr)
-
+def get_ips_data(dataframe):
+    data = []
+    for index, row in dataframe.iterrows():
+        data.append({
+            "ip": row["IP Address"],
+            "subnet_mask": row["Subnet Mask"]
+        })
+    return data
 
 def convert_to_bin(num):
     return bin(int(num))[2:]
@@ -30,11 +41,11 @@ def get_network_bits(ip,subnet):
         binary_octet = convert_to_bin(i)
         network_bits += count_ones(binary_octet)
     return network_bits
-# calc cidr notation
-def get_cidr_notation(ip,subnet):
-    return f"{ip}/{get_network_bits(ip,subnet)}"
 
-# get network address
+def get_cidr_notation(ip, subnet):
+    network_addr = get_net_addr(ip, subnet)
+    return f"{network_addr}/{get_network_bits(ip, subnet)}"
+
 def get_net_addr(ip,subnet):
     res = []
     ip_arr = convert_dotted_to_array(ip)
@@ -42,7 +53,6 @@ def get_net_addr(ip,subnet):
     for i in range(4):
         res.append(str(int(ip_arr[i]) & int(sub_arr[i])))
     return ".".join(octet for octet in res)
-
 
 def get_broadcast_addr(ip,subnet):
     res = []
@@ -55,11 +65,8 @@ def get_broadcast_addr(ip,subnet):
         res.append(str(int(ip_arr[i]) | int(inverted_subnet_mask[i])))
     return ".".join(res)
 
-
 def get_number_of_usable_hosts(ip,subnet):
     return 2 ** (32-get_network_bits(ip,subnet)) -2
-
-
 
 def group_ips(input_arr):
     networks = {}
@@ -72,9 +79,35 @@ def group_ips(input_arr):
         networks[net_addr].append(row["ip"])
     return networks
 
+def generate_json_report(df):
+    input_arr = get_ips_data(df)
+    processed_ips = []
+    for _, row in df.iterrows():
+        ip = row["IP Address"]
+        subnet = row["Subnet Mask"]
+                
+        processed_ips.append({
+            "ip": ip,
+            "subnet_mask": subnet,
+            "cidr_notation": get_cidr_notation(ip, subnet),
+            "network_address": get_net_addr(ip, subnet),
+            "broadcast_address": get_broadcast_addr(ip, subnet),
+            "usable_hosts": get_number_of_usable_hosts(ip, subnet)
+        })
 
-# print(get_number_of_usable_hosts(ip,subnet_mask)-2)
-# print(get_broadcast_addr(ip,subnet_mask))
-# print(get_net_addr(ip,subnet_mask))
+    grouped_ips = group_ips(input_arr)
 
-# print(30 & 24)
+    report = {
+        "ip_details": processed_ips,
+        "subnet_groups": grouped_ips
+    }
+
+    with open("subnet_report.json", "w") as f:
+        json.dump(report, f, indent=4)
+
+    print("Report generated as network_report.json")
+
+
+if __name__ == "__main__":
+    df = get_dataframe("ip_data.xlsx")
+    generate_json_report(df)
