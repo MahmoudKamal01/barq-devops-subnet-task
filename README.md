@@ -13,7 +13,7 @@
 
 #### Using Pre-built Image
 
-Run the pre-built Docker image, mapping your data folder to the container:
+Run the pre-built Docker image, mapping your data folder (folder that contains the excel data file e.g ip_data.xlsx) to the container:
 
 ```bash
 docker run --rm -v "/path/to/your/data/folder:/app" mahmoudkamalaldeen/subnet_analyzer ip_data.xlsx
