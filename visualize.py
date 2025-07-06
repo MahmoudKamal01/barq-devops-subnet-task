@@ -4,7 +4,7 @@ import sys
 
 try:
     # Try to open and load the JSON file
-    with open('network_report.json') as f:
+    with open('subnet_report.json') as f:
         try:
             data = json.load(f)
         except json.JSONDecodeError:
@@ -44,7 +44,7 @@ try:
     plt.show()
 
 except FileNotFoundError:
-    print("Error: network_report.json file not found")
+    print("Error: subnet_report.json file not found")
     print("Please run the analysis script first to generate the report")
     sys.exit(1)
 except Exception as e:

@@ -1,3 +1,4 @@
+import sys
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -22,10 +23,10 @@ def get_ips_data(dataframe):
     return data
 
 def convert_to_bin(num):
-    return bin(int(num))[2:]
+    return bin(int(num))[2:] 
 
 def convert_dotted_to_array(ip):
-    return ip.split(sep=".")
+    return ip.split(sep=".")  
 
 def count_ones(num):
     x = str(num)
@@ -42,17 +43,18 @@ def get_network_bits(ip,subnet):
         network_bits += count_ones(binary_octet)
     return network_bits
 
-def get_cidr_notation(ip, subnet):
-    network_addr = get_net_addr(ip, subnet)
-    return f"{network_addr}/{get_network_bits(ip, subnet)}"
-
 def get_net_addr(ip,subnet):
     res = []
     ip_arr = convert_dotted_to_array(ip)
     sub_arr = convert_dotted_to_array(subnet)
     for i in range(4):
-        res.append(str(int(ip_arr[i]) & int(sub_arr[i])))
+        res.append(str(int(ip_arr[i]) & int(sub_arr[i])))  
     return ".".join(octet for octet in res)
+
+def get_cidr_notation(ip, subnet):
+    network_addr = get_net_addr(ip, subnet)
+    return f"{network_addr}/{get_network_bits(ip, subnet)}"
+
 
 def get_broadcast_addr(ip,subnet):
     res = []
@@ -105,9 +107,18 @@ def generate_json_report(df):
     with open("subnet_report.json", "w") as f:
         json.dump(report, f, indent=4)
 
-    print("Report generated as network_report.json")
+    print("Report generated as subnet_report.json")
 
 
 if __name__ == "__main__":
-    df = get_dataframe("ip_data.xlsx")
-    generate_json_report(df)
+    
+    if len(sys.argv) < 2:
+        print("Error: Please provide the Excel filename as an argument")
+        print("Usage: python subnet_analyzer.py <filename.xlsx>")
+        sys.exit(1)
+    
+    excel_file = sys.argv[1]
+    
+    df = get_dataframe(excel_file)
+    if df is not None:  # 
+        generate_json_report(df)
